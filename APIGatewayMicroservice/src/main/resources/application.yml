@@ -1,0 +1,43 @@
+server:
+  port: 8002
+  
+spring:
+  application:
+    name: API-gateway
+    
+    
+  cloud:
+    gateway:
+      routes:
+      - id: AdminMicroservice
+        uri: http://AdminMicroservice
+        predicates:
+        - Path=/api/**
+        
+        
+      - id: CartMicroservice
+        uri: http://CartMicroservice
+        predicates:
+        - Path=/apicart/**
+        
+      - id: CropMicroservice
+        uri: http://CropMicroservice
+        predicates:
+        - Path=/api/**
+       
+      - id: FarmerMicroservice
+        uri: http://FarmerMicroservice
+        predicates:
+        - Path=/api/**
+        
+        
+        
+      - id: ManagementMicroservice
+        uri: http://ManagementMicroservice
+        predicates:
+        - Path=/api/auth/** 
+        
+      - id: PaymentMicroservice
+        uri: http://PaymentMicroservice
+        predicates:
+        - Path=/payment/**
