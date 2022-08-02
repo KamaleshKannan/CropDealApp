@@ -1,0 +1,32 @@
+.home{
+   
+    max-height: 1000px;
+    color: white;
+    
+}
+.blink_me{
+    animation:blinker 2s linear infinite;
+}
+@keyframes blinker{
+    50%{
+        opacity:0;
+    }
+}
+.tr{
+    background-color: black;
+}
+.th{
+    color: cornsilk;
+}
+.form-group{
+    color:black;
+}
+.forms{
+    color:white;
+}
+.card col-md-6 offset-md-3 offset-md-3{
+    color:white;
+}
+.button{
+   align-items: center;
+}
